@@ -2,5 +2,14 @@
 <%= form_tag(form_action, :id => "#{form_type}_form", :enctype => "multipart/form-data", :class => className) do %>
 
   <%= render :partial => "form" %>
+  HI What's UP?
+    <!--<%= render "admin/content/merge" if @article.id && current_user.admin? %>-->
+
+    <!--<%= render :partial => "merge" %>-->
+
+    <!--<%= render :partial => "merge" if @article.id && current_user.admin? %>-->
+
 
 <% end %>
+
+<%= render :partial => "merge" if @article.id && current_user.admin? %>
